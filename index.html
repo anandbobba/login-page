@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebaseauth.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-quote">
+            <img src="dyamicdv.jpg" alt="Logo" class="logo">
+            <h1>
+                <span class="explore">Explore</span>,
+                <span class="connect">Connect</span> and
+                <span class="grow">Grow</span>
+                <span class="with">with</span>
+                <span class="every">every</span>
+                <span class="club">Club!</span>
+            </h1>
+        </div>
+
+        <div class="form-container" id="signup" style="display:none;">
+            <h1 class="form-title">Register</h1>
+            <form method="post" action="">
+                <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+                <div class="input-group">
+                    <label for="fName" class="input-label">First Name</label>
+                    <input type="text" id="fName" placeholder="First Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="lName" class="input-label">Last Name</label>
+                    <input type="text" id="lName" placeholder="Last Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="usn" class="input-label">USN</label>
+                    <input type="text" id="usn" placeholder="USN" required>
+                </div>
+                <div class="input-group">
+                    <label for="rEmail" class="input-label">Email</label>
+                    <input type="email" id="rEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="rPassword" class="input-label">Password</label>
+                    <input type="password" id="rPassword" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <label for="club" class="input-label">Select Club</label>
+                    <select id="club" required>
+                        <option value="">Select Club</option>
+                        <option value="Robotics Club">Robotics Club</option>
+                        <option value="Aero Club">Aero Club</option>
+                        <option value="CSI Club">CSI Club</option>
+                        <option value="HackerEarth Club">HackerEarth Club</option>
+                        <option value="Kalanjali Club">Kalanjali Club</option>
+                        <option value="Finite Loop Club">Finite Loop Club</option>
+                    </select>
+                </div>
+                <button class="btn" id="submitSignUp">Sign Up</button>
+            </form>
+            <p class="or">
+                ----------or--------
+            </p>
+            <div class="icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="links">
+                <p>Already Have Account?</p>
+                <button id="signInButton">Sign In</button>
+            </div>
+        </div>
+
+        <div class="form-container" id="signIn">
+            <h1 class="form-title">Sign In</h1>
+            <form method="post" action="">
+                <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+                <div class="input-group">
+                    <label for="email" class="input-label">Email</label>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password" class="input-label">Password</label>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <p class="recover">
+                    <a href="#">Recover Password</a>
+                </p>
+                <button class="btn" id="submitSignIn">Sign In</button>
+            </form>
+            <p class="or">
+                ----------or--------
+            </p>
+            <div class="icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="links">
+                <p>Don't have an account yet?</p>
+                <button id="signUpButton">Sign Up</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
