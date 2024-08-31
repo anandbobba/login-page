@@ -64,8 +64,7 @@
                 ----------or--------
             </p>
             <div class="icons">
-                <i class="fab fa-google"></i>
-                <i class="fab fa-facebook"></i>
+                <!-- Removed Google and Facebook logos -->
             </div>
             <div class="links">
                 <p>Already Have Account?</p>
@@ -86,7 +85,7 @@
                     <input type="password" id="password" placeholder="Password" required>
                 </div>
                 <p class="recover">
-                    <a href="#">Recover Password</a>
+                    <a href="#" id="recoverPasswordLink">Recover Password</a>
                 </p>
                 <button class="btn" id="submitSignIn">Sign In</button>
             </form>
@@ -94,8 +93,7 @@
                 ----------or--------
             </p>
             <div class="icons">
-                <i class="fab fa-google"></i>
-                <i class="fab fa-facebook"></i>
+                <!-- Removed Google and Facebook logos -->
             </div>
             <div class="links">
                 <p>Don't have an account yet?</p>
@@ -103,6 +101,35 @@
             </div>
         </div>
     </div>
+
+    <!-- Recover Password Popups -->
+    <div id="recoverPassword" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closeRecover">&times;</span>
+            <h2>Recover Password</h2>
+            <div id="emailPopup">
+                <label for="recoverEmail">Enter your email:</label>
+                <input type="email" id="recoverEmail" placeholder="Email" required>
+                <button id="nextToUSN">Next</button>
+            </div>
+            <div id="usnPopup" style="display:none;">
+                <label for="recoverUSN">Enter your USN:</label>
+                <input type="text" id="recoverUSN" placeholder="USN" required>
+                <button id="nextToPassword">Next</button>
+            </div>
+            <div id="passwordPopup" style="display:none;">
+                <label for="newPassword">Enter new password:</label>
+                <input type="password" id="newPassword" placeholder="New Password" required>
+                <label for="confirmPassword">Confirm new password:</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button id="submitNewPassword">Submit</button>
+            </div>
+            <div id="message" style="display:none;">
+                <p id="messageText"></p>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
